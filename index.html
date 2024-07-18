@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Run!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="titleWindow" class="window window1">
+        <h1 class="game-win">Campus Run!</h1>
+        <img src="./images/player.png" alt="ゲームクリア画像" class="game-image">
+        <div class="button-container">
+            <button onclick="showWindow('mainWindow'); initGame();">スタート</button>
+            <button onclick="showWindow('creditWindow')">クレジット</button>
+        </div>
+    </div>
+    <div id="mainWindow" class="window window2">
+        <canvas id="gameCanvas"></canvas>
+        <button onclick="showWindow('titleWindow')">タイトルへ戻る</button>
+    </div>
+    <div id="creditWindow" class="window window3">
+        <ul id="c1" >
+        <h1>長崎大学 松本研究室</h1>
+        <h2>メンバー</h2>
+        <p>原田 知季：プロジェクトマネージャー、リードプログラマー</p>
+        <p>佐藤 柊磨:プロデューサー、プログラマー</p>
+        <p>居倉 蓮:レベルデザイナー</p>
+        <p>本下 諒一:ゲームデザイナー</p>
+        <p>森 一希:QAテスター</p>
+        <p>Lakshya Goel:アシスタントプロデューサー</p>
+
+        <h2>操作方法</h2>
+        <p>←→キー：横方向への移動</p>
+        <p>スペースキー：ジャンプ</p>
+        <p>Zキー:アイテムを取ると攻撃が可能に！</p>
+
+        <h2>参考資料</h2>
+        <p>- https://www.irasutoya.com/</p>
+        <p>- https://aipict.com/</p>
+        <p>- https://refmap-l.blog.jp/</p>
+        <p>- https://ichisaeki.com/ </p>
+            
+        <button onclick="showWindow('titleWindow')">タイトルへ戻る</button>
+        </ul>
+    </div>
+    <div id="gameOverWindow" class="window window4">
+        <h2 class="game-win">GAME OVER</h2>
+        <img src="./images/school_tani_otosu_boy.png" alt="ゲームクリア画面" class="game-image">
+        <p id="gameOverScore" class="gameScore"></p>
+        <div class="button-container">
+            <button onclick="retry()">リトライ</button>
+            <button onclick="showWindow('titleWindow')">タイトルへ戻る</button>
+        </div>
+    </div>
+    <div id="gameClearWindow" class="window window5">
+        <h1 class="game-win">GAME CLEAR!</h1>
+        <img src="./images/school_tani_get_boy.png" alt="ゲームクリア画面" class="game-image">
+        <p id="gameClearScore" class="gameScore"></p>
+        <div class="button-container">
+            <button onclick="restart();">タイトルに戻る</button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

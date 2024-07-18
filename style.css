@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.window {
+    display: none;
+    width:1024px;
+    height: 750px;
+    padding: 20px;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#creditWindow {
+    text-align: center;
+}
+
+#c1 {
+    text-align: left; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 1000px; 
+}
+
+@media (max-width: 768px) {
+    .window {
+        width: 100%;
+        height: 100%;
+    }
+
+    #gameCanvas {
+        width: 100%;
+        height: calc(100% - 60px);
+    }
+}
+
+#gameCanvas {
+    border: 1px solid #000;
+    background-color: #87CEEB;
+    width: 100%;
+    height: calc(100% - 60px); /* ボタンのスペースを確保 */
+}
+
+button {
+    padding: 20px 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.window1 {/*タイトル*/
+    background-image: url('./images/blue_sky03.png');
+    background-size: cover;
+}
+
+
+.window3 {/*クレジット画面*/
+    background-image: url('images/sky_country05.png');
+    background-size: cover;
+}
+
+.window4 {/*ゲームオーバー*/
+    background-image: url('images/lab01.png');
+    background-size: cover;
+}
+
+
+.game-win {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.game-image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.window5 {/*ゲームクリア*/
+    background-image: url('images/sky_country05.png');
+    background-size: cover;
+}
+
+.gameScore {
+    font-size: 40px;
+}
